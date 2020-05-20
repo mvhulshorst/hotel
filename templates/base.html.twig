@@ -3,9 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% endblock %}
     </head>
     <body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container">
+
+                <a class="navbar-brand" href="/default">Home</a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/user">Klant</a>
+                            <a class="nav-link" href="/betaal">Betaal</a>
+                            <a class="nav-link" href="/reservering">Reservering</a>
+                            <a class="nav-link" href="/soort">Soort</a>
+                            <a class="nav-link" href="/kamer">Kamer</a>
+                            <a class="nav-link" href="/extras">Extras</a>
+                            <a class="nav-link" href="/image">Image</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
